@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Monthly expense:</strong>
+  <%= @report.monthly_expense %>
+</p>
+
+<p>
+  <strong>Monthly:</strong>
+  <%= @report.monthly %>
+</p>
+
+<%= link_to 'Edit', edit_report_path(@report) %> |
+<%= link_to 'Back', reports_path %>
