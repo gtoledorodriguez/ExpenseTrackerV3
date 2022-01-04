@@ -1,6 +1,11 @@
+<%= render 'navbar', transaction: @transaction %>
+<body>
+<div class="container-fluid">
 <h1>Editing Transaction</h1>
 
 <%= render 'form', transaction: @transaction %>
 
 <%= link_to 'Show', @transaction %> |
 <%= link_to 'Back', transactions_path %>
+</div>
+</body>

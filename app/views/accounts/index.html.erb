@@ -1,13 +1,36 @@
-<p id="notice"><%= notice %></p>
+<head>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
 
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+
+<%= render 'navbar', account: @account %>
+<p id="notice"><%= notice %></p>
+<body>
+<div class="container-fluid">
 <h1>Accounts</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Act name</th>
-      <th>Act num</th>
-      <th>Act type</th>
+      <th>Act ID</th>
+      <th>Act Name</th>
+      <th>Act Num</th>
+      <th>Act Type</th>
       <th>Balance</th>
       <th colspan="3"></th>
     </tr>
@@ -16,6 +39,7 @@
   <tbody>
     <% @accounts.each do |account| %>
       <tr>
+        <td><%= account.id %></td>
         <td><%= account.act_name %></td>
         <td><%= account.act_num %></td>
         <td><%= account.act_type %></td>
@@ -31,3 +55,5 @@
 <br>
 
 <%= link_to 'New Account', new_account_path %>
+</div>
+</body>
